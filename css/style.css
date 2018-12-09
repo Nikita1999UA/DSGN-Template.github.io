@@ -8,8 +8,8 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 500px 280px 250px 200px  200px 300px 530px 400px 530px 400px 200px 250px;
-      grid-template-rows: 500px 280px 250px 200px  200px 300px 530px 400px 530px 400px 200px 250px;
+  -ms-grid-rows: 500px 280px 250px 200px  200px 300px 530px 400px 530px 600px;
+      grid-template-rows: 500px 280px 250px 200px  200px 300px 530px 400px 530px 600px;
       grid-template-areas: "a a a a a a a a a a a b b b b b " "c c c c c  d d d d d d e e e e e" "c c c c c d d d d d d h h h h h " "f f f g g g g g g g g h h h h h" "f f f g g g g g g g g i i i i i" "j j j j j j j k k k k l l l l l " "m m m m m n n n n n n n n n n n " "o o o o o p p p p p p p p p p p" "s s s s s r r r r r r r r r r r " "t t t t t t t t u u u u u u u u";
 }
 
@@ -1246,18 +1246,102 @@
 }
 
 .map {
-  background-color: black;
   -ms-grid-row: 10;
   -ms-grid-column: 1;
   -ms-grid-column-span: 8;
   grid-area: t;
 }
 
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .contact {
-  background-color: gray;
+  background-color: #E9EAE2;
   -ms-grid-row: 10;
   -ms-grid-column: 9;
   -ms-grid-column-span: 8;
   grid-area: u;
+  position: relative;
+}
+
+.contact .contact-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  width: 500px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 15%;
+  margin-top: 20%;
+}
+
+.contact .contact__left {
+  max-width: 150px;
+  width: 100%;
+}
+
+.contact .contact__left p {
+  font-family: "Roboto Condensed";
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.contact .contact__logo {
+  text-align: right;
+}
+
+.contact .contact__logo img {
+  max-width: 130px;
+  max-height: 160px;
+  height: 100%;
+  width: 100%;
+}
+
+.contact .contact__text {
+  text-align: right;
+}
+
+.contact .contact__text_r {
+  font-family: 'Roboto Condensed';
+  font-size: 18px;
+  color: black;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.contact .contact__social {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.contact .contact__social i {
+  color: #38CCC2;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  padding: 2px;
+}
+
+.contact .contact__social i:hover {
+  color: #FEB331;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.contact .contact__copy {
+  text-align: center;
+}
+
+.contact .contact__copy_p {
+  font-family: "Roboto Condensed";
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 60px;
+  color: #191919;
 }
 /*# sourceMappingURL=style.css.map */
