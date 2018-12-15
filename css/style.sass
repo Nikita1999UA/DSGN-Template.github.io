@@ -83,6 +83,67 @@ $cursor: pointer
         justify-content: center
         align-items: center
         cursor: $cursor
+        transition: 0.4s
+    & .head__content:hover
+        background-color: #edb413
+    & .head__nav
+        position: relative
+        display: block
+        grid-column: 2
+        grid-row: 1
+        min-height: 150px
+        max-width: 150px
+    & .head__nav-switcher
+        width: 76px
+        height: 76px
+        position: absolute
+        right: 36%
+        top: 50%
+        margin-top: -38px
+        left: 50%
+        margin-left: -38px
+    & .head__nav-body
+        visibility: hidden
+        display: flex
+        position: absolute
+        height: 76px
+        right: 36%
+        top: 75%
+        margin: 0
+        padding: 0
+        transform: translateX(-84px)
+        list-style: none
+        
+    & .head__nav-body--open
+        visibility: visible   
+
+    & .head__nav-body-item
+        flex: 1 0 auto
+        display: block
+        width: 100px
+    & .head__nav-body-item:not(:first-child)
+        margin-left: 0px
+
+    & .head__nav-body-link
+        display: flex
+        justify-content: center
+        align-items: center
+        white-space: nowrap
+        height: 100%
+        box-sizing: border-box
+        padding: 0 24px
+        background: #edb413
+        transform: translateY(-100%)
+        transition: 0.2s
+    & .head__nav-body-link:hover
+        background-color: #c59613
+        
+    & .head__nav-body-link
+        font-family: $font-stack
+        font-size: 13px
+        color: #fff
+        text-transform: uppercase
+        text-decoration: none
     & .head__contacts
         position: absolute
         top: 80%
