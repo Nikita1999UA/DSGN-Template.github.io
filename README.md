@@ -2,6 +2,7 @@
 * Technology stack:
   * HTML
   * CSS
+  * GRID0
   * JS
   * SASS
   * BEM
