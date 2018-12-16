@@ -15,15 +15,18 @@
     .wrapper
         display: grid
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-        grid-template-rows: 500px 530px 350px 350px  450px 350px 450px 400px 350px 600px 
-        grid-template-areas: "a a a a a a a b b b b b b b b b " "c c c c c c c d d d d d d d d d" "e e e e e e e e h h h h h h h h" "i i i i i i i i i i i i i i i i" "f f f f f g g g g g g g g g g g" "j j j j j j j j j j j j j j j j" "k k k k k k k k k l l l l l l l " "n n n n n n n n n n n n n n n n " "o o o o o o o o o o o o o o o o" "p p p p p p p p p p p p p p p p" "r r r r r r r r r r r r r r r r " "t t t t t t t t u u u u u u u u"
+        grid-template-rows: 500px 530px 530px 350px  450px 350px 450px 400px 300px 400px  350px 800px 300px 980px 450px
+        grid-template-areas: "b b b b b b b b b b b b b b b b " "a a a a a a a a a a a a a a a a " "c c c c c c c c d d d d d d d d" "e e e e e e e e h h h h h h h h " "i i i i i i i i i i i i i i i i" "f f f f f f f g g g g g g g g g" "j j j j j j j j j j j j j j j j" "k k k k k k k k l l l l l l l l "  "m m m m m m m m m m m m m m m m "  "n n n n n n n n n n n n n n n n"  "o o o o o o o o o o o o o o o o" "p p p p p p p p p p p p p p p p" "s s s s s s s s s s s s s s s s " "r r r r r r r r r r r r r r r r" "t t t t t t t t t t t t t t t t" "u u u u u u u u u u u u u u u u "
     .staffPerson-container
         display: grid
-        grid-template-columns: repeat(2, 1fr) !important
-        margin-left: 2%
-        width: 95%
-        margin-top: 100px
-        justify-content: space-between
+        grid-template-columns: repeat(1, 1fr) !important
+        justify-items: center
+        justify-self: stretch
+        margin-top: 10px !important
+    .studio .studio__projects
+        top: 40%
+    .news .news__projects
+        top: 40%
     .newsInfo .newsInfo-container
         display: grid
         grid-template-columns: repeat(1, 1fr)
@@ -38,21 +41,23 @@
         width: auto
     .sesan .sesan__heart
         width: auto
-    .news
-        display: none
-    .studio
-        display: none
-    .main
-        display: none
-    .head .head__content
-        margin-left: 15px
-        margin-top: 15px
+    .mainRight .mainRight__heart
+        width: auto
+    .luis .luis__heart
+        width: auto
+    .alessi .alessi__text
+        width: auto
+    .alessi .alessi__heart
+        width: auto
+    .head .head__content 
+        margin-left: 80%
+
 @media (max-width: 768px)
     .wrapper
         display: grid
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-        grid-template-rows: 500px 530px 530px 350px  450px 350px 450px 400px 250px 350px  
-        grid-template-areas: "b b b b b b b b b b b b b b b b " "a a a a a a a a a a a a a a a a " "d d d d d d d d d d d d d d d d" "e e e e e e e e e e e e e e e e" "h h h h h h h h h h h h h h h h"  "i i i i i i i i i i i i i i i i" "f f f f f g g g g g g g g g g g" "j j j j j j j j j j j j j j j j" "k k k k k k k k k l l l l l l l "  "o o o o o o o o o o o o o o o o" "p p p p p p p p p p p p p p p p" "r r r r r r r r r r r r r r r r " "t t t t t t t t t t t t t t t t" "u u u u u u u u u u u u u u u u "
+        grid-template-rows: 500px 530px 530px 350px  450px 350px 450px 400px 300px 400px  350px 800px 300px 980px 450px
+        grid-template-areas: "b b b b b b b b b b b b b b b b " "a a a a a a a a a a a a a a a a " "c c c c c c c c d d d d d d d d" "e e e e e e e e h h h h h h h h " "i i i i i i i i i i i i i i i i" "f f f f f f f g g g g g g g g g" "j j j j j j j j j j j j j j j j" "k k k k k k k k l l l l l l l l "  "m m m m m m m m m m m m m m m m "  "n n n n n n n n n n n n n n n n"  "o o o o o o o o o o o o o o o o" "p p p p p p p p p p p p p p p p" "s s s s s s s s s s s s s s s s " "r r r r r r r r r r r r r r r r" "t t t t t t t t t t t t t t t t" "u u u u u u u u u u u u u u u u "
     .luisMain .luisMain__link
         top: 40%
         left: 50%
@@ -61,12 +66,46 @@
         top: 50%
     .timeLine .timeLine__text
         left: 30%
-    .studioInfo
-        display: none
-
     .contact .contact-container
         width: auto
         padding: 20px
+    .head .head__content
+        margin-left: 75%
+        margin-top: 15px
+    .main .main__projects
+        left: 20%
+
+
+@media (max-width: 650px)
+    .wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+        grid-template-rows: 500px 530px 530px 350px  450px 350px 450px 400px 300px 400px  350px 350px 300px 680px 350px 450px 300px 900px  450px 
+        grid-template-areas: "b b b b b b b b b b b b b b b b " "a a a a a a a a a a a a a a a a " "c c c c c c c c c c c c c c c c" "d d d d d d d d d d d d d d d d ""e e e e e e e e e e e e e e e e " "i i i i i i i i i i i i i i i i" "h h h h h h h h h h h h h h h h " "f f f f f f f f f f f f f f f f" "g g g g g g g g g g g g g g g g" "j j j j j j j j j j j j j j j j" "k k k k k k k k k k k k k k k k " "l l l l l l l l l l l l l l l l "  "m m m m m m m m m m m m m m m m "  "n n n n n n n n n n n n n n n n"  "o o o o o o o o o o o o o o o o" "p p p p p p p p p p p p p p p p" "s s s s s s s s s s s s s s s s " "r r r r r r r r r r r r r r r r" "t t t t t t t t t t t t t t t t" "u u u u u u u u u u u u u u u u " 
+    .luis
+        background-size: cover
+    .luisMain .luisMain__link
+        top: 44%
+    .timeLine .timeLine__text
+        left: 20%
+    .studioInfo .studioInfo__text
+        left: initial
+        position: relative
+        width: 80%
+        margin-top: 10%
+    .studioInfo .studioInfo__images
+        left: initial
+        position: relative
+        width: 75%
+    .studioInfo .studioInfo-container
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        grid-template-rows: 350px
+        justify-items: center
+        justify-self: stretch
+    .head .head__content
+        margin-left: 15px
+        margin-top: 15px
     .head .head__nav-body
         right: 0
         left: 15%
